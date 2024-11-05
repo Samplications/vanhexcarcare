@@ -10,27 +10,27 @@ import vid_bmw_wassen from './assets/videos/bmw_wassen.mp4'
 import vid_bmw_afspoelen from './assets/videos/bmw_afspoelen.mp4'
 import vid_bmw_afdrogen from './assets/videos/bmw_afdrogen.mp4'
 
-import pkt_list_ext from './assets/pakketten/ext_pkt_list.png'
-import pkt_list_int from './assets/pakketten/int_pkt_list.png'
-import pkt_list_pol from './assets/pakketten/polijst_pkt_list.png'
-import pkt_list_keram from './assets/pakketten/keram_coat_pkt_list.png'
-import pkt_list_keram_plus from './assets/pakketten/keram_coat_plus_pkt_list.png'
+import pkt_list_ext from './assets/pakketten/ext_pkt_list.jpg'
+import pkt_list_int from './assets/pakketten/int_pkt_list.jpg'
+import pkt_list_pol from './assets/pakketten/polijst_pkt_list.jpg'
+import pkt_list_keram from './assets/pakketten/keram_coat_pkt_list.jpg'
+import pkt_list_keram_plus from './assets/pakketten/keram_coat_plus_pkt_list.jpg'
 
-import pkt_expl_ext from './assets/pakketten/ext_pkt_expl.png'
-import pkt_expl_int from './assets/pakketten/int_pkt_expl.png'
-import pkt_expl_pol from './assets/pakketten/polijst_pkt_expl.png'
-import pkt_expl_keram from './assets/pakketten/keram_coat_pkt_expl.png'
-import pkt_expl_keram_plus from './assets/pakketten/keram_coat_plus_pkt_list.png' 
+import pkt_expl_ext from './assets/pakketten/ext_pkt_expl.jpg'
+import pkt_expl_int from './assets/pakketten/int_pkt_expl.jpg'
+import pkt_expl_pol from './assets/pakketten/polijst_pkt_expl.jpg'
+import pkt_expl_keram from './assets/pakketten/keram_coat_pkt_expl.jpg'
+import pkt_expl_keram_plus from './assets/pakketten/keram_coat_plus_pkt_list.jpg' 
 // TODO Get keram coat plust needs expl part
 
-import img_flank_before from './assets/beforeNafter/flank_before.jpg'
-import img_flank_after from './assets/beforeNafter/flank_after.jpg'
+import img_flank_before from './assets/beforeNafter/flank_before/flank_before.jpg'
+import img_flank_after from './assets/beforeNafter/flank_after/flank_after.jpg'
 
-import img_mat_before from './assets/beforeNafter/mat_before.jpg'
-import img_mat_after from './assets/beforeNafter/mat_after.jpg'
+import img_mat_before from './assets/beforeNafter/mat_before/mat_before.jpg'
+import img_mat_after from './assets/beforeNafter/mat_after/mat_after.jpg'
 
-import img_wiel_before from './assets/beforeNafter/wiel_before.jpg'
-import img_wiel_after from './assets/beforeNafter/wiel_after.jpg'
+import img_wiel_before from './assets/beforeNafter/wiel_before/wiel_before.jpg'
+import img_wiel_after from './assets/beforeNafter/wiel_after/wiel_after.jpg'
 
 
 const PageDiv = styled.div`
@@ -78,6 +78,7 @@ const TopSection = styled(Section)`
 `;
 
 const BookBtn = styled.button`
+  font-size: 1.4rem;
 `;
 
 const TopVidsDiv = styled.div`
@@ -85,7 +86,6 @@ const TopVidsDiv = styled.div`
   justify-content: center;
   flex-direction: row;
   wrap: no-wrap;
-  
 `;
 
 const TopVids = styled.video`
@@ -165,6 +165,13 @@ const InstaSection = styled(Section)`
   color: var(--c-black);
 `;
 
+function preloadImages(imageArray) {
+  imageArray.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}
+
 function App() {
 
   const [extImage, setExtImage] = useState(pkt_list_ext);
@@ -182,6 +189,8 @@ function App() {
     img_wiel_after
   ];
 
+  preloadImages([pkt_expl_ext, pkt_expl_int, pkt_expl_pol, pkt_expl_keram]);
+
   return (
     <PageDiv>
 
@@ -189,15 +198,15 @@ function App() {
         <PageContentDiv>
           {/* <TopImg src={img_jarne} alt='Jarne in actie' loading='lazy'/> vids from bmw */}
           <TopVidsDiv>
-            <TopVids autoPlay muted loop><source src={vid_bmw_inzepen} type='video/mp4'/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_foam} type='video/mp4'/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_wassen} type='video/mp4'/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_afspoelen} type='video/mp4'/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_afdrogen} type='video/mp4'/></TopVids>
+            <TopVids autoPlay muted loop><source src={vid_bmw_inzepen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop><source src={vid_bmw_foam} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop><source src={vid_bmw_wassen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop><source src={vid_bmw_afspoelen} type='video/mp4'preload="none"/></TopVids>
+            <TopVids autoPlay muted loop><source src={vid_bmw_afdrogen} type='video/mp4' preload="none"/></TopVids>
           </TopVidsDiv>
 
           <IntroTextDiv>
-            <h3>Welkom bij Vanhex Car Care - Uw Specialist in Auto Detailing!</h3>
+            <h2>Welkom bij Vanhex Car Care - Uw Specialist in Auto Detailing!</h2>
             <p>
             Wij brengen uw auto weer in showroomstaat, zowel van binnen als van buiten. Onze diensten omvatten professionele dieptereiniging, krasvrije wasbeurten, polijsten, en duurzame keramische coatings voor een langdurige bescherming en glans. Of het nu gaat om het grondig reinigen van het interieur of het herstellen van de lak, we leveren vakwerk tot in de kleinste details.
             <br/><br/>
@@ -208,7 +217,7 @@ function App() {
 
       <PakketSection>
         <PageContentDiv>
-          <h3>Pakketten</h3>
+          <h2>Pakketten</h2>
           <PakketDiv>
             <PakketImg src={extImage} alt='Exterieur pakket' loading='lazy' onMouseOver={() => setExtImage(pkt_expl_ext)} onMouseOut={() => setExtImage(pkt_list_ext)}/>
             <PakketImg src={intImage} alt='Interieur pakket' loading='lazy' onMouseOver={() => setIntImage(pkt_expl_int)} onMouseOut={() => setIntImage(pkt_list_int)}/>
@@ -225,7 +234,7 @@ function App() {
       <BeforeNAfterSection>
         <PageContentDiv>
           
-            <h3>Wat u kan verwachten</h3>
+            <h2>Wat u kan verwachten</h2>
             <p>U kunt rekenen op een grondige, veilige reiniging van het interieur en exterieur, waarbij elke kras, vlek en onvolkomenheid wordt aangepakt. Onze polijst- en coatingtechnieken herstellen de lak en beschermen deze langdurig en dat allemaal op locatie. Wij zorgen ervoor dat uw auto er weer als nieuw uitziet</p>
             
             <BeforeNAfterDiv>
@@ -256,7 +265,7 @@ function App() {
 
       <InstaSection>
         <PageContentDiv>
-            <h3>Volg ons ook op instagram!</h3>
+            <h2>Volg ons ook op instagram!</h2>
             <p>Work in progress</p>
             {/* <iframe src="https://www.instagram.com/vanhexcarcare/" title="Vanhex carcare instagram"></iframe> */}
         </PageContentDiv>

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const NavLink = styled(Link)`
   font-weight: 400;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
 
   opacity:0.87;
   color: var(--c-white);
@@ -24,7 +24,7 @@ const NavLink = styled(Link)`
 const Telref = styled.a`
   font-weight: 400;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
 
   opacity:0.87;
   color: var(--c-white);
@@ -53,19 +53,25 @@ const InfoDiv = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+  font-size: 2rem;
 
-  p{font-size: 0.8rem;}
+  p{font-size: 1.4rem;}
 
 `;
 
 const CenterDiv = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.4rem;
+
+  button{
+    font-size: 1.4rem;
+  };
+  
 
   @media (max-width: 767px) {
     
-    margin: 0.2rem 0;
+    margin: 0.4rem 0;
 
     p{
       margin: 0;
@@ -79,6 +85,7 @@ const ButtonDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
+  font-size: 1.4rem;
 
   @media (max-width: 767px) {
      margin-bottom: 0.5rem;
@@ -104,7 +111,7 @@ const ItemDiv = styled.div`
 `;
 
 const Icon = styled.img`
-  height: 1rem;
+  height: 1.4rem;
   width: auto;
   opacity:0.87;
 
@@ -139,14 +146,14 @@ const Header = () => {
 
           <ItemDiv>
             <CenterDiv>
-              <Icon src={icon_phone}/>
+              <Icon src={icon_phone} alt="telefoon icoon" loading='lazy'/>
               <Telref href="tel:+324 89 717 066">+324 89 717 066</Telref>
             </CenterDiv>
           </ItemDiv>
 
           <ItemDiv>
             <CenterDiv>
-              <Icon src={icon_instagram}/>
+              <Icon src={icon_instagram} alt="instagram icoon" loading='lazy'/>
               <NavLink to="https://www.instagram.com/vanhexcarcare/" target="_blank" rel="noopener noreferrer">@vanhexcarcare</NavLink>
             </CenterDiv>
           </ItemDiv>
