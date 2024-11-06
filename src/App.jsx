@@ -91,6 +91,7 @@ const TopVidsDiv = styled.div`
 const TopVids = styled.video`
   width: 20.5%;
   height: auto;
+  pointer-events: none;
 `;
 
 const PakketSection = styled(Section)`

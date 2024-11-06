@@ -68,13 +68,26 @@ button:hover {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #1b2430;
-    background-color: #ffff;
+    background-color: var(--c-white);
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--c-secondary);
+    color: var(--c-white);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--c-white);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: var(--c-secondary);
+    color: var(--c-white);
   }
 }

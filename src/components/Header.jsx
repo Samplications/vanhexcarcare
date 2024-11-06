@@ -99,6 +99,9 @@ const ButtonDiv = styled.div`
   @media (max-width: 767px) {
      margin-bottom: 0.5rem;
   };
+
+
+}
 `;
 
 const LogoImg = styled.img`
