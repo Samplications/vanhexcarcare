@@ -19,6 +19,10 @@ const NavLink = styled(Link)`
   &:hover{
       color: var(--c-white);
   }
+
+  @media (max-width: 767px) {
+    font-size: 0.8rem;
+  };
 `;
 
 const Telref = styled.a`
@@ -32,6 +36,10 @@ const Telref = styled.a`
   &:hover{
       color: var(--c-white);
   }
+
+  @media (max-width: 767px) {
+    font-size: 0.8rem;
+  };
 `;
 
 const HeadDiv = styled.div`
@@ -181,7 +189,9 @@ const Header = () => {
       <Mview>
       <ButtonDiv>
          <CenterDiv>
-            <LogoImg src={logo} alt='logo' loading='lazy'/>
+            <NavLink to="/">
+              <LogoImg src={logo} alt='logo' loading='lazy'/>
+            </NavLink>
           </CenterDiv>
           </ButtonDiv>
 
@@ -189,14 +199,14 @@ const Header = () => {
           <ItemDiv>
             <CenterDiv>
               <Icon src={icon_phone}/>
-              <p>+324 89 717 066</p>
+              <Telref href="tel:+324 89 717 066">+324 89 717 066</Telref>
             </CenterDiv>
           </ItemDiv>
 
           <ItemDiv>
             <CenterDiv>
               <Icon src={icon_instagram}/>
-              <p>@vanhexcarcare</p>
+              <NavLink to="https://www.instagram.com/vanhexcarcare/" target="_blank" rel="noopener noreferrer">@vanhexcarcare</NavLink>
             </CenterDiv>
           </ItemDiv>
         </InfoDiv>

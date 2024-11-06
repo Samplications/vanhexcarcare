@@ -48,10 +48,10 @@ h2 {
 
 p {
   font-size: 1.5rem;
+  
 }
 
 button {
-  /* border-radius: 8px; */
   border: 2px solid var(--c-secondary);
   padding: 0.6em 1.2em;
   font-size: 0.8rem;
@@ -70,9 +70,6 @@ button:hover {
   :root {
     background-color: var(--c-white);
   }
-  a:hover {
-    color: #747bff;
-  }
   button {
     background-color: var(--c-secondary);
     color: var(--c-white);
@@ -83,11 +80,18 @@ button:hover {
   :root {
     background-color: var(--c-white);
   }
-  a:hover {
-    color: #747bff;
-  }
   button {
     background-color: var(--c-secondary);
     color: var(--c-white);
   }
 }
+
+@media (max-width: 767px) {
+  p{font-size: 1rem;}
+
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+}; 
