@@ -169,6 +169,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,Mr=$.video`
   width: 20.5%;
   height: auto;
+  pointer-events: none;
 `,M1=$(Sl)`
   color: var(--c-black);
   padding: 0 0 2rem 0;
@@ -330,6 +331,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   @media (max-width: 767px) {
      margin-bottom: 0.5rem;
   };
+
+
+}
 `,Ef=$.img`
   width: 7vw;
   height: auto;
