@@ -57,6 +57,11 @@ const InfoDiv = styled.div`
 
   p{font-size: 1.4rem;}
 
+  @media (max-width: 767px) {
+    gap: 1rem;
+    p{font-size: 0.8rem;}
+  };
+
 `;
 
 const CenterDiv = styled.div`
@@ -76,6 +81,10 @@ const CenterDiv = styled.div`
     p{
       margin: 0;
     }
+
+    button{
+      font-size: 1rem;
+    };
   };
 
   }

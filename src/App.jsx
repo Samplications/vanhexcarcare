@@ -41,7 +41,7 @@ const PageDiv = styled.div`
   margin-top: 7vw;
 
   @media (max-width: 767px) {
-     margin-top: 40vw; 
+     margin-top: 45vw; 
   };
 `;
 
