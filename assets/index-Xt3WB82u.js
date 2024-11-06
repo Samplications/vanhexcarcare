@@ -131,7 +131,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin-top: 7vw;
 
   @media (max-width: 767px) {
-     margin-top: 40vw; 
+     margin-top: 45vw; 
   };
 `,qi=$.div`
   width: 70%;
@@ -292,6 +292,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   p{font-size: 1.4rem;}
 
+  @media (max-width: 767px) {
+    gap: 1rem;
+    p{font-size: 0.8rem;}
+  };
+
 `,mn=$.div`
   display: flex;
   align-items: center;
@@ -309,6 +314,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     p{
       margin: 0;
     }
+
+    button{
+      font-size: 1rem;
+    };
   };
 
   }
@@ -355,12 +364,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   flex-direction: column;
 `,Yw=()=>E.jsxs(Hw,{children:[E.jsxs(Qw,{children:[E.jsx(xf,{to:"/",children:E.jsx(Ef,{src:yf,alt:"logo",loading:"lazy"})}),E.jsxs(kf,{children:[E.jsx(Ji,{children:E.jsxs(mn,{children:[E.jsx(eo,{src:Sf,alt:"telefoon icoon",loading:"lazy"}),E.jsx(Ww,{href:"tel:+324 89 717 066",children:"+324 89 717 066"})]})}),E.jsx(Ji,{children:E.jsxs(mn,{children:[E.jsx(eo,{src:wf,alt:"instagram icoon",loading:"lazy"}),E.jsx(xf,{to:"https://www.instagram.com/vanhexcarcare/",target:"_blank",rel:"noopener noreferrer",children:"@vanhexcarcare"})]})}),E.jsx(oa,{children:E.jsx(mn,{children:E.jsx("button",{children:"Contact"})})})]})]}),E.jsxs(Kw,{children:[E.jsx(oa,{children:E.jsx(mn,{children:E.jsx(Ef,{src:yf,alt:"logo",loading:"lazy"})})}),E.jsxs(kf,{children:[E.jsx(Ji,{children:E.jsxs(mn,{children:[E.jsx(eo,{src:Sf}),E.jsx("p",{children:"+324 89 717 066"})]})}),E.jsx(Ji,{children:E.jsxs(mn,{children:[E.jsx(eo,{src:wf}),E.jsx("p",{children:"@vanhexcarcare"})]})})]}),E.jsx(oa,{children:E.jsx(mn,{children:E.jsx("button",{children:"Contact"})})})]})]}),Gw=$.div`
     background-color: var(--c-primary);
-    font-size: 0.5rem;
     padding: 0.5rem;
 
     display: flex;
     justify-content: center;
     flex-direction: row;
 
-    p{margin:0;}
+    p{margin:0;
+    font-size: 0.7rem;}
 `,Xw=()=>E.jsx(Gw,{children:E.jsx("p",{children:"Vanhex Carcare © 2024"})});Ap(document.getElementById("root")).render(E.jsx(P.StrictMode,{children:E.jsx($w,{children:E.jsxs(E.Fragment,{children:[E.jsx(Yw,{}),E.jsx(zw,{children:E.jsx(xm,{exact:!0,path:"/",element:E.jsx(V1,{})})}),E.jsx(Xw,{})]})})}));
