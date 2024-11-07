@@ -98,6 +98,28 @@ const CenterDiv = styled.div`
   }
 `;
 
+const LogoCenterDiv = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  @media (max-width: 767px) {
+    
+    margin: 0;
+
+  }
+`;
+
+const LogoDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  @media (max-width: 767px) {
+     margin: 0.5em 0 0 0;
+  };
+`;
+
 const ButtonDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -107,8 +129,6 @@ const ButtonDiv = styled.div`
   @media (max-width: 767px) {
      margin-bottom: 0.5rem;
   };
-
-
 }
 `;
 
@@ -187,13 +207,13 @@ const Header = () => {
       </Bview>
 
       <Mview>
-      <ButtonDiv>
-         <CenterDiv>
+      <LogoDiv>
+         <LogoCenterDiv>
             <NavLink to="/">
               <LogoImg src={logo} alt='logo' loading='lazy'/>
             </NavLink>
-          </CenterDiv>
-          </ButtonDiv>
+          </LogoCenterDiv>
+          </LogoDiv>
 
         <InfoDiv>
           <ItemDiv>

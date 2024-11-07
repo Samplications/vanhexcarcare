@@ -51,14 +51,19 @@ const PageContentDiv = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  h3{
-    margin: 0 0 0.5rem 0
+  h2{
+    margin: 1.2rem 0 0.75rem 0
   }
 
   p{
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.75rem 0;
     padding: 0;
   }
+
+  @media (max-width: 767px) {
+     p{
+    margin: 0 0 1rem 0;}
+  };
 `;
 
 const Section = styled.section`
@@ -74,7 +79,7 @@ const TopSection = styled(Section)`
 
   color: var(--c-black);
 
-  padding: 2em 0;
+  padding: 2em 0 1em 0;
 `;
 
 const BookBtn = styled.button`
@@ -123,6 +128,10 @@ const PakketImg = styled.img`
 
 const IntroTextDiv = styled.div`
   margin: 1rem 0;
+
+  @media (max-width: 767px) {
+    margin: 0;
+  };
 `;
 
 const BeforeNAfterSection = styled(Section)`
