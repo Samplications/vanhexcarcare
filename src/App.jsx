@@ -208,11 +208,11 @@ function App() {
         <PageContentDiv>
           {/* <TopImg src={img_jarne} alt='Jarne in actie' loading='lazy'/> vids from bmw */}
           <TopVidsDiv>
-            <TopVids autoPlay muted loop><source src={vid_bmw_inzepen} type='video/mp4' preload="none"/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_foam} type='video/mp4' preload="none"/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_wassen} type='video/mp4' preload="none"/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_afspoelen} type='video/mp4'preload="none"/></TopVids>
-            <TopVids autoPlay muted loop><source src={vid_bmw_afdrogen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_inzepen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_foam} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_wassen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_afspoelen} type='video/mp4'preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_afdrogen} type='video/mp4' preload="none"/></TopVids>
           </TopVidsDiv>
 
           <IntroTextDiv>
