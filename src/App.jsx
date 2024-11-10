@@ -3,12 +3,20 @@ import styled from 'styled-components'
 import BeforeAfterSlider from "./components/BeforeAfterSlider";
 import { BrowserView, MobileView } from 'react-device-detect';
 import Slideshow from './components/Slideshow';
+import ContactModal from './components/ContactModal';
 
 import vid_bmw_inzepen from './assets/videos/bmw_inzepen.mp4'
 import vid_bmw_foam from './assets/videos/bmw_foam.mp4'
 import vid_bmw_wassen from './assets/videos/bmw_wassen.mp4'
 import vid_bmw_afspoelen from './assets/videos/bmw_afspoelen.mp4'
 import vid_bmw_afdrogen from './assets/videos/bmw_afdrogen.mp4'
+
+import vid_bmx_x5_foamen from './assets/videos/bmx_x5_foamen.mp4'
+import vid_bmx_x5_afspuiten from './assets/videos/bmx_x5_afspuiten.mp4'
+import vid_polijsten from './assets/videos/polijsten.mp4'
+import vid_koffer_stofzuigen from './assets/videos/koffer_stofzuigen.mp4'
+import vid_koffer_borstelen from './assets/videos/koffer_borstelen_e.mp4'
+import vid_matten_strepen from './assets/videos/matten_strepen.mp4'
 
 import pkt_list_ext from './assets/pakketten/ext_pkt_list.jpg'
 import pkt_list_int from './assets/pakketten/int_pkt_list.jpg'
@@ -94,7 +102,7 @@ const TopVidsDiv = styled.div`
 `;
 
 const TopVids = styled.video`
-  width: 20.5%;
+  width: 16.9%;
   height: auto;
   pointer-events: none;
 `;
@@ -184,6 +192,16 @@ function preloadImages(imageArray) {
 
 function App() {
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   const [extImage, setExtImage] = useState(pkt_list_ext);
   const [intImage, setIntImage] = useState(pkt_list_int);
   const [polijstImage, setPolijstImage] = useState(pkt_list_pol);
@@ -204,15 +222,18 @@ function App() {
   return (
     <PageDiv>
 
+      <ContactModal isOpen={isModalOpen} onClose={handleCloseModal}/>
+        
       <TopSection>
         <PageContentDiv>
           {/* <TopImg src={img_jarne} alt='Jarne in actie' loading='lazy'/> vids from bmw */}
           <TopVidsDiv>
-            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_inzepen} type='video/mp4' preload="none"/></TopVids>
-            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_foam} type='video/mp4' preload="none"/></TopVids>
-            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_wassen} type='video/mp4' preload="none"/></TopVids>
-            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_afspoelen} type='video/mp4'preload="none"/></TopVids>
-            <TopVids autoPlay muted loop playsInline><source src={vid_bmw_afdrogen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_bmx_x5_foamen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_bmx_x5_afspuiten} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_polijsten} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_koffer_borstelen} type='video/mp4' preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_koffer_stofzuigen} type='video/mp4'preload="none"/></TopVids>
+            <TopVids autoPlay muted loop playsInline><source src={vid_matten_strepen} type='video/mp4' preload="none"/></TopVids>
           </TopVidsDiv>
 
           <IntroTextDiv>
@@ -236,7 +257,7 @@ function App() {
             <PakketImg src={keramPlusImage} alt='Keramiek+ pakket' loading='lazy' onMouseOver={() => setKeramPlusImage(pkt_expl_keram_plus)} onMouseOut={() => setKeramPlusImage(pkt_list_keram_plus)}/>
           </PakketDiv>
           
-          <BookBtn>Boek nu!</BookBtn>
+          <BookBtn onClick={handleOpenModal}>Boek nu!</BookBtn>
         </PageContentDiv>
       </PakketSection>
 

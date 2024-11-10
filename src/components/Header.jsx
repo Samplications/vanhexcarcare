@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useState } from 'react'
+import ContactModal from './ContactModal.jsx';
 
 import logo from '../assets/logo_trans_bg_cropped.png'
 import icon_instagram from '../assets/icons/instagram_w.png'
@@ -175,8 +177,20 @@ const Mview = styled(MobileView)`
 `;
 
 const Header = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <HeadDiv>
+      <ContactModal isOpen={isModalOpen} onClose={handleCloseModal}/>
       <Bview>
         <NavLink to="/">
           <LogoImg src={logo} alt='logo' loading='lazy'/>
@@ -200,7 +214,7 @@ const Header = () => {
           
           <ButtonDiv>
             <CenterDiv>
-              <button>Contact</button>
+              <button onClick={handleOpenModal}>Contact</button>
             </CenterDiv>
           </ButtonDiv>
         </InfoDiv>
@@ -233,7 +247,7 @@ const Header = () => {
 
         <ButtonDiv>
           <CenterDiv>
-            <button>Contact</button>
+            <button  onClick={handleOpenModal}>Contact</button>
           </CenterDiv>
         </ButtonDiv>
 
