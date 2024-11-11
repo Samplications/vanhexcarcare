@@ -251,7 +251,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   @media (max-width: 767px) {
     font-size: 0.8rem;
   };
-`;function Om({isOpen:e,onClose:t,children:n}){if(!e)return null;const r=i=>{i.target===i.currentTarget&&t()};return S.jsx(Rw,{onClick:r,children:S.jsxs(Mw,{onClick:i=>i.stopPropagation(),children:[S.jsx(Lw,{onClick:t,children:"×"}),S.jsx("h2",{children:"Contacteer ons!"}),S.jsx("p",{children:"Nog vragen, of kunnen we er direct invliegen? U kan ons contacteren via instagram of door rechtstreeks te bellen."}),S.jsx(rf,{children:S.jsxs(lf,{children:[S.jsx(of,{src:zw,alt:"telefoon icoon",loading:"lazy"}),S.jsx(Dw,{href:"tel:+324 89 717 066",children:"+324 89 717 066"})]})}),S.jsx(rf,{children:S.jsxs(lf,{children:[S.jsx(of,{src:Iw,alt:"instagram icoon",loading:"lazy"}),S.jsx(Aw,{to:"https://www.instagram.com/vanhexcarcare/",target:"_blank",rel:"noopener noreferrer",children:"@vanhexcarcare"})]})})]})})}const Fw="/assets/bmx_x5_foamen-OxPQWZix.mp4",$w="/assets/bmx_x5_afspuiten-DXDOZbe5.mp4",bw="/assets/polijsten-DVjKmEEO.mp4",Uw="/assets/koffer_stofzuigen-qKntb1HY.mp4",Bw="/assets/koffer_borstelen_e-DDJWeQ3U.mp4",Vw="/assets/matten_strepen-hSDcfnl6.mp4",af="/assets/ext_pkt_list-CzunGAXI.jpg",sf="/assets/int_pkt_list-BfTYXtWK.jpg",uf="/assets/polijst_pkt_list-Ci3Gp1GB.jpg",cf="/assets/keram_coat_pkt_list-Cpj1IECy.jpg",ia="/assets/keram_coat_plus_pkt_list-BExguNU1.jpg",ff="/assets/ext_pkt_expl-cU05fLV7.jpg",df="/assets/int_pkt_expl-wOYR-tCD.jpg",pf="/assets/polijst_pkt_expl-B5LIOTQM.jpg",hf="/assets/keram_coat_pkt_expl-B9Mw5evP.jpg",mf="/assets/flank_before-D3lIBol6.jpg",vf="/assets/flank_after-CqDbZGwB.jpg",gf="/assets/mat_before-C37MndOs.jpg",yf="/assets/mat_after-DWMfq8Zl.jpg",wf="/assets/wiel_before-sLvEE5Kj.jpg",xf="/assets/wiel_after-DsjA3_qU.jpg",Ww=M.div`
+`;function Om({isOpen:e,onClose:t,children:n}){if(!e)return null;const r=i=>{i.target===i.currentTarget&&t()};return S.jsx(Rw,{onClick:r,children:S.jsxs(Mw,{onClick:i=>i.stopPropagation(),children:[S.jsx(Lw,{onClick:t,children:"×"}),S.jsx("h2",{children:"Contacteer ons!"}),S.jsx("p",{children:"Nog vragen, of kunnen we er direct invliegen? U kan ons contacteren via instagram of door rechtstreeks te bellen."}),S.jsx(rf,{children:S.jsxs(lf,{children:[S.jsx(of,{src:zw,alt:"telefoon icoon",loading:"lazy"}),S.jsx(Dw,{href:"tel:+324 89 717 066",children:"+324 89 717 066"})]})}),S.jsx(rf,{children:S.jsxs(lf,{children:[S.jsx(of,{src:Iw,alt:"instagram icoon",loading:"lazy"}),S.jsx(Aw,{to:"https://www.instagram.com/vanhexcarcare/",target:"_blank",rel:"noopener noreferrer",children:"@vanhexcarcare"})]})})]})})}const Fw="/assets/bmx_x5_foamen-OxPQWZix.mp4",$w="/assets/bmx_x5_afspuiten-DXDOZbe5.mp4",bw="/assets/polijsten-DVjKmEEO.mp4",Uw="/assets/koffer_stofzuigen-qKntb1HY.mp4",Bw="/assets/koffer_borstelen_e-DDJWeQ3U.mp4",Vw="/assets/matten_strepen-hSDcfnl6.mp4",af="/assets/ext_pkt_list-CzunGAXI.jpg",sf="/assets/int_pkt_list-BfTYXtWK.jpg",uf="/assets/polijst_pkt_list-Ci3Gp1GB.jpg",cf="/assets/keram_coat_pkt_list-Cpj1IECy.jpg",ia="/assets/keram_coat_plus_pkt_list-BExguNU1.jpg",ff="/assets/ext_pkt_expl-cU05fLV7.jpg",df="/assets/int_pkt_expl-wOYR-tCD.jpg",pf="/assets/polijst_pkt_expl-B5LIOTQM.jpg",hf="/assets/keram_coat_pkt_expl-B9Mw5evP.jpg",mf="/assets/flank_before-D3lIBol6.jpg",vf="/assets/flank_after-CqDbZGwB.jpg",gf="/assets/mat_before-C37MndOs.jpg",yf="/assets/mat_after-DWMfq8Zl.jpg",wf="/assets/wiel_before-sLvEE5Kj.jpg",xf="/assets/wiel_after-DsjA3_qU.jpg",Ww=({postUrl:e})=>(P.useEffect(()=>{const t=document.createElement("script");return t.src="https://www.instagram.com/embed.js",t.async=!0,document.body.appendChild(t),()=>{document.body.removeChild(t)}},[]),S.jsx("div",{style:{display:"flex",justifyContent:"center",padding:"10px"},children:S.jsx("blockquote",{className:"instagram-media","data-instgrm-permalink":e,"data-instgrm-version":"12",style:{background:"#FFF",border:"0",borderRadius:"3px",boxShadow:"0 0 1px rgba(0,0,0,0.5), 0 1px 10px rgba(0,0,0,0.15)",margin:"0 auto",width:"100%",padding:"0"}})})),Hw=M.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -284,7 +284,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   display: flex;
   justify-content: center;
   flex-direction: row;
-`,Hw=M(El)`
+`,Qw=M(El)`
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -292,9 +292,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   color: var(--c-black);
 
   padding: 2em 0 1em 0;
-`,Qw=M.button`
+`,Kw=M.button`
   font-size: 1.4rem;
-`,Kw=M.div`
+`,Yw=M.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -303,10 +303,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   width: 16.9%;
   height: auto;
   pointer-events: none;
-`,Yw=M(El)`
+`,Gw=M(El)`
   color: var(--c-black);
   padding: 0 0 2rem 0;
-`,Gw=M.div`
+`,Xw=M.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -324,22 +324,22 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
    @media (max-width: 767px) {
     width: 100%;
   };
-`,Xw=M.div`
+`,Zw=M.div`
   margin: 1rem 0;
 
   @media (max-width: 767px) {
     margin: 0;
   };
-`,Zw=M(El)`
+`,qw=M(El)`
   background-color: var(--c-primary);
   padding: 2rem 0 2.5rem 0;
   color: var(--c-white);
-`,qw=M(pm)`
+`,Jw=M(pm)`
   display: flex;
   justify-content: center;
   flex-direction: row;
   gap: 2em;
-`,Jw=M(hm)`
+`,ex=M(hm)`
   // display: flex;
   // justify-content: center;
   // flex-direction: row;
@@ -355,13 +355,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin: 0.2rem;
     text-align: center;
   }
-`,ex=M(El)`
+`,tx=M(El)`
   background-color: var(--c-white);
 
   padding: 2rem 0 2.5rem 0;
 
   color: var(--c-black);
-`;function tx(e){e.forEach(t=>{const n=new Image;n.src=t})}function nx(){const[e,t]=P.useState(!1),n=()=>{t(!0)},r=()=>{t(!1)},[i,o]=P.useState(af),[l,a]=P.useState(sf),[s,c]=P.useState(uf),[y,g]=P.useState(cf),[u,m]=P.useState(ia),p=[mf,vf,gf,yf,wf,xf];return tx([ff,df,pf,hf]),S.jsxs(Ww,{children:[S.jsx(Om,{isOpen:e,onClose:r}),S.jsx(Hw,{children:S.jsxs(qi,{children:[S.jsxs(Kw,{children:[S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Fw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:$w,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:bw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Bw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Uw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Vw,type:"video/mp4",preload:"none"})})]}),S.jsxs(Xw,{children:[S.jsx("h2",{children:"Welkom bij Vanhex Car Care - Uw Specialist in Auto Detailing!"}),S.jsxs("p",{children:["Wij brengen uw auto weer in showroomstaat, zowel van binnen als van buiten. Onze diensten omvatten professionele dieptereiniging, krasvrije wasbeurten, polijsten, en duurzame keramische coatings voor een langdurige bescherming en glans. Of het nu gaat om het grondig reinigen van het interieur of het herstellen van de lak, we leveren vakwerk tot in de kleinste details.",S.jsx("br",{}),S.jsx("br",{}),"En het beste van alles? Wij komen naar u toe! Dankzij onze mobiele service ervaart u de topkwaliteit van onze detailing-diensten gewoon bij u op locatie. Ontdek hoe we uw auto de zorg kunnen geven die het verdient!"]})]})]})}),S.jsx(Yw,{children:S.jsxs(qi,{children:[S.jsx("h2",{children:"Pakketten"}),S.jsxs(Gw,{children:[S.jsx(Ar,{src:i,alt:"Exterieur pakket",loading:"lazy",onMouseOver:()=>o(ff),onMouseOut:()=>o(af)}),S.jsx(Ar,{src:l,alt:"Interieur pakket",loading:"lazy",onMouseOver:()=>a(df),onMouseOut:()=>a(sf)}),S.jsx(Ar,{src:s,alt:"Polijst pakket",loading:"lazy",onMouseOver:()=>c(pf),onMouseOut:()=>c(uf)}),S.jsx(Ar,{src:y,alt:"Keramiek pakket",loading:"lazy",onMouseOver:()=>g(hf),onMouseOut:()=>g(cf)}),S.jsx(Ar,{src:u,alt:"Keramiek+ pakket",loading:"lazy",onMouseOver:()=>m(ia),onMouseOut:()=>m(ia)})]}),S.jsx(Qw,{onClick:n,children:"Boek nu!"})]})}),S.jsx(Zw,{children:S.jsxs(qi,{children:[S.jsx("h2",{children:"Wat u kan verwachten"}),S.jsx("p",{children:"U kunt rekenen op een grondige, veilige reiniging van het interieur en exterieur, waarbij elke kras, vlek en onvolkomenheid wordt aangepakt. Onze polijst- en coatingtechnieken herstellen de lak en beschermen deze langdurig en dat allemaal op locatie. Wij zorgen ervoor dat uw auto er weer als nieuw uitziet"}),S.jsxs(qw,{children:[S.jsxs(oa,{children:[S.jsx("p",{children:"vanbuiten..."}),S.jsx(na,{beforeImage:mf,afterImage:vf})]}),S.jsxs(oa,{children:[S.jsx("p",{children:"vanbinnen..."}),S.jsx(na,{beforeImage:gf,afterImage:yf})]}),S.jsxs(oa,{children:[S.jsx("p",{children:"tot in het kleinste detail!"}),S.jsx(na,{beforeImage:wf,afterImage:xf})]})]}),S.jsx(Jw,{children:S.jsx(I1,{images:p,interval:3e3})})]})}),S.jsx(ex,{children:S.jsxs(qi,{children:[S.jsx("h2",{children:"Volg ons ook op instagram!"}),S.jsx("p",{children:"Work in progress"})]})})]})}const Sf="/assets/logo_trans_bg_cropped-Dq3D0V7P.png",kf="/assets/instagram_w-BbGQhcOQ.png",Ef="/assets/phone-call_w-CX8hl7si.png",Ji=M(Pm)`
+`;function nx(e){e.forEach(t=>{const n=new Image;n.src=t})}function rx(){const[e,t]=P.useState(!1),n=()=>{t(!0)},r=()=>{t(!1)},[i,o]=P.useState(af),[l,a]=P.useState(sf),[s,c]=P.useState(uf),[y,g]=P.useState(cf),[u,m]=P.useState(ia),p=[mf,vf,gf,yf,wf,xf];return nx([ff,df,pf,hf]),S.jsxs(Hw,{children:[S.jsx(Om,{isOpen:e,onClose:r}),S.jsx(Qw,{children:S.jsxs(qi,{children:[S.jsxs(Yw,{children:[S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Fw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:$w,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:bw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Bw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Uw,type:"video/mp4",preload:"none"})}),S.jsx(bn,{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:S.jsx("source",{src:Vw,type:"video/mp4",preload:"none"})})]}),S.jsxs(Zw,{children:[S.jsx("h2",{children:"Welkom bij Vanhex Car Care - Uw Specialist in Auto Detailing!"}),S.jsxs("p",{children:["Wij brengen uw auto weer in showroomstaat, zowel van binnen als van buiten. Onze diensten omvatten professionele dieptereiniging, krasvrije wasbeurten, polijsten, en duurzame keramische coatings voor een langdurige bescherming en glans. Of het nu gaat om het grondig reinigen van het interieur of het herstellen van de lak, we leveren vakwerk tot in de kleinste details.",S.jsx("br",{}),S.jsx("br",{}),"En het beste van alles? Wij komen naar u toe! Dankzij onze mobiele service ervaart u de topkwaliteit van onze detailing-diensten gewoon bij u op locatie. Ontdek hoe we uw auto de zorg kunnen geven die het verdient!"]})]})]})}),S.jsx(Gw,{children:S.jsxs(qi,{children:[S.jsx("h2",{children:"Pakketten"}),S.jsxs(Xw,{children:[S.jsx(Ar,{src:i,alt:"Exterieur pakket",loading:"lazy",onMouseOver:()=>o(ff),onMouseOut:()=>o(af)}),S.jsx(Ar,{src:l,alt:"Interieur pakket",loading:"lazy",onMouseOver:()=>a(df),onMouseOut:()=>a(sf)}),S.jsx(Ar,{src:s,alt:"Polijst pakket",loading:"lazy",onMouseOver:()=>c(pf),onMouseOut:()=>c(uf)}),S.jsx(Ar,{src:y,alt:"Keramiek pakket",loading:"lazy",onMouseOver:()=>g(hf),onMouseOut:()=>g(cf)}),S.jsx(Ar,{src:u,alt:"Keramiek+ pakket",loading:"lazy",onMouseOver:()=>m(ia),onMouseOut:()=>m(ia)})]}),S.jsx(Kw,{onClick:n,children:"Boek nu!"})]})}),S.jsx(qw,{children:S.jsxs(qi,{children:[S.jsx("h2",{children:"Wat u kan verwachten"}),S.jsx("p",{children:"U kunt rekenen op een grondige, veilige reiniging van het interieur en exterieur, waarbij elke kras, vlek en onvolkomenheid wordt aangepakt. Onze polijst- en coatingtechnieken herstellen de lak en beschermen deze langdurig en dat allemaal op locatie. Wij zorgen ervoor dat uw auto er weer als nieuw uitziet"}),S.jsxs(Jw,{children:[S.jsxs(oa,{children:[S.jsx("p",{children:"vanbuiten..."}),S.jsx(na,{beforeImage:mf,afterImage:vf})]}),S.jsxs(oa,{children:[S.jsx("p",{children:"vanbinnen..."}),S.jsx(na,{beforeImage:gf,afterImage:yf})]}),S.jsxs(oa,{children:[S.jsx("p",{children:"tot in het kleinste detail!"}),S.jsx(na,{beforeImage:wf,afterImage:xf})]})]}),S.jsx(ex,{children:S.jsx(I1,{images:p,interval:3e3})})]})}),S.jsx(tx,{children:S.jsxs(qi,{children:[S.jsx("h2",{children:"Volg ons ook op instagram!"}),S.jsx(Ww,{postUrl:"https://www.instagram.com/vanhexcarcare/"})]})})]})}const Sf="/assets/logo_trans_bg_cropped-Dq3D0V7P.png",kf="/assets/instagram_w-BbGQhcOQ.png",Ef="/assets/phone-call_w-CX8hl7si.png",Ji=M(Pm)`
   font-weight: 400;
   text-decoration: none;
   font-size: 1.4rem;
@@ -391,7 +391,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   @media (max-width: 767px) {
     font-size: 0.8rem;
   };
-`,rx=M.div`
+`,ix=M.div`
   position: fixed;
   top: 0;
   width: 100vw;
@@ -440,7 +440,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   };
 
   }
-`,ix=M.div`
+`,ox=M.div`
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -450,7 +450,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin: 0;
 
   }
-`,ox=M.div`
+`,lx=M.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -490,17 +490,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   @media (max-width: 767px) {
       height: 0.8rem;
   };
-`,lx=M(pm)`
+`,ax=M(pm)`
   width: 70%;
   flex-wrap: no-wrap;
   display: flex;
   justify-content: space-between;
-`,ax=M(hm)`
+`,sx=M(hm)`
   width: 70%;
   flex-wrap: no-wrap;
   display: flex;
   flex-direction: column;
-`,sx=()=>{const[e,t]=P.useState(!1),n=()=>{t(!0)},r=()=>{t(!1)};return S.jsxs(rx,{children:[S.jsx(Om,{isOpen:e,onClose:r}),S.jsxs(lx,{children:[S.jsx(Ji,{to:"/",children:S.jsx(Of,{src:Sf,alt:"logo",loading:"lazy"})}),S.jsxs(_f,{children:[S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:Ef,alt:"telefoon icoon",loading:"lazy"}),S.jsx(Cf,{href:"tel:+324 89 717 066",children:"+324 89 717 066"})]})}),S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:kf,alt:"instagram icoon",loading:"lazy"}),S.jsx(Ji,{to:"https://www.instagram.com/vanhexcarcare/",target:"_blank",rel:"noopener noreferrer",children:"@vanhexcarcare"})]})}),S.jsx(Pf,{children:S.jsx(Un,{children:S.jsx("button",{onClick:n,children:"Contact"})})})]})]}),S.jsxs(ax,{children:[S.jsx(ox,{children:S.jsx(ix,{children:S.jsx(Ji,{to:"/",children:S.jsx(Of,{src:Sf,alt:"logo",loading:"lazy"})})})}),S.jsxs(_f,{children:[S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:Ef}),S.jsx(Cf,{href:"tel:+324 89 717 066",children:"+324 89 717 066"})]})}),S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:kf}),S.jsx(Ji,{to:"https://www.instagram.com/vanhexcarcare/",target:"_blank",rel:"noopener noreferrer",children:"@vanhexcarcare"})]})})]}),S.jsx(Pf,{children:S.jsx(Un,{children:S.jsx("button",{onClick:n,children:"Contact"})})})]})]})},ux=M.div`
+`,ux=()=>{const[e,t]=P.useState(!1),n=()=>{t(!0)},r=()=>{t(!1)};return S.jsxs(ix,{children:[S.jsx(Om,{isOpen:e,onClose:r}),S.jsxs(ax,{children:[S.jsx(Ji,{to:"/",children:S.jsx(Of,{src:Sf,alt:"logo",loading:"lazy"})}),S.jsxs(_f,{children:[S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:Ef,alt:"telefoon icoon",loading:"lazy"}),S.jsx(Cf,{href:"tel:+324 89 717 066",children:"+324 89 717 066"})]})}),S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:kf,alt:"instagram icoon",loading:"lazy"}),S.jsx(Ji,{to:"https://www.instagram.com/vanhexcarcare/",target:"_blank",rel:"noopener noreferrer",children:"@vanhexcarcare"})]})}),S.jsx(Pf,{children:S.jsx(Un,{children:S.jsx("button",{onClick:n,children:"Contact"})})})]})]}),S.jsxs(sx,{children:[S.jsx(lx,{children:S.jsx(ox,{children:S.jsx(Ji,{to:"/",children:S.jsx(Of,{src:Sf,alt:"logo",loading:"lazy"})})})}),S.jsxs(_f,{children:[S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:Ef}),S.jsx(Cf,{href:"tel:+324 89 717 066",children:"+324 89 717 066"})]})}),S.jsx(eo,{children:S.jsxs(Un,{children:[S.jsx(to,{src:kf}),S.jsx(Ji,{to:"https://www.instagram.com/vanhexcarcare/",target:"_blank",rel:"noopener noreferrer",children:"@vanhexcarcare"})]})})]}),S.jsx(Pf,{children:S.jsx(Un,{children:S.jsx("button",{onClick:n,children:"Contact"})})})]})]})},cx=M.div`
     background-color: var(--c-primary);
     padding: 0.5rem;
 
@@ -510,4 +510,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     p{margin:0;
     font-size: 0.7rem;}
-`,cx=()=>S.jsx(ux,{children:S.jsx("p",{children:"Vanhex Carcare © 2024"})});bp(document.getElementById("root")).render(S.jsx(P.StrictMode,{children:S.jsx(Ow,{children:S.jsxs(S.Fragment,{children:[S.jsx(sx,{}),S.jsx(xw,{children:S.jsx(_m,{exact:!0,path:"/",element:S.jsx(nx,{})})}),S.jsx(cx,{})]})})}));
+`,fx=()=>S.jsx(cx,{children:S.jsx("p",{children:"Vanhex Carcare © 2024"})});bp(document.getElementById("root")).render(S.jsx(P.StrictMode,{children:S.jsx(Ow,{children:S.jsxs(S.Fragment,{children:[S.jsx(ux,{}),S.jsx(xw,{children:S.jsx(_m,{exact:!0,path:"/",element:S.jsx(rx,{})})}),S.jsx(fx,{})]})})}));
