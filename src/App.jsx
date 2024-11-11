@@ -255,7 +255,7 @@ function App() {
             <PakketImg src={intImage} alt='Interieur pakket' loading='lazy' onMouseOver={() => setIntImage(pkt_expl_int)} onMouseOut={() => setIntImage(pkt_list_int)}/>
             <PakketImg src={polijstImage} alt='Polijst pakket' loading='lazy' onMouseOver={() => setPolijstImage(pkt_expl_pol)} onMouseOut={() => setPolijstImage(pkt_list_pol)}/>
             <PakketImg src={keramImage} alt='Keramiek pakket' loading='lazy' onMouseOver={() => setKeramImage(pkt_expl_keram)} onMouseOut={() => setKeramImage(pkt_list_keram)}/>
-            <PakketImg src={keramPlusImage} alt='Keramiek+ pakket' loading='lazy' onMouseOver={() => setKeramPlusImage(pkt_expl_keram_plus)} onMouseOut={() => setKeramPlusImage(pkt_list_keram_plus)}/>
+            <PakketImg src={keramPlusImage} alt='Keramiek+ pakket' loading='lazy' onMouseOver={() => setKeramPlusImage(pkt_expl_keram)} onMouseOut={() => setKeramPlusImage(pkt_list_keram_plus)}/>
           </PakketDiv>
           
           <BookBtn onClick={handleOpenModal}>Boek nu!</BookBtn>
