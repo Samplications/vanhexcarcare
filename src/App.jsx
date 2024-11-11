@@ -179,7 +179,7 @@ const BeforeAfterSliderDiv = styled.div`
 const InstaSection = styled(Section)`
   background-color: var(--c-white);
 
-  padding: 2rem 0 2.5rem 0;
+  padding: 2rem 0 0.5rem 0;
 
   color: var(--c-black);
 `;
