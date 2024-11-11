@@ -39,6 +39,7 @@ import img_mat_after from './assets/beforeNafter/mat_after/mat_after.jpg'
 
 import img_wiel_before from './assets/beforeNafter/wiel_before/wiel_before.jpg'
 import img_wiel_after from './assets/beforeNafter/wiel_after/wiel_after.jpg'
+import InstagramEmbed from './components/InstagramEmbed';
 
 
 const PageDiv = styled.div`
@@ -297,8 +298,7 @@ function App() {
       <InstaSection>
         <PageContentDiv>
             <h2>Volg ons ook op instagram!</h2>
-            <p>Work in progress</p>
-            {/* <iframe src="https://www.instagram.com/vanhexcarcare/" title="Vanhex carcare instagram"></iframe> */}
+            <InstagramEmbed postUrl="https://www.instagram.com/vanhexcarcare/"/>
         </PageContentDiv>
       </InstaSection>
     </PageDiv>
