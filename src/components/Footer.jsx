@@ -16,7 +16,7 @@ const FooterDiv = styled.div`
 const Footer = () => {
   return (
     <FooterDiv>
-      <p>Vanhex Carcare © 2024</p>
+      <p>Vanhex Carcare © 2025</p>
     </FooterDiv>
   )
 }
