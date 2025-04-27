@@ -40,7 +40,12 @@ import img_mat_after from './assets/beforeNafter/mat_after/mat_after.jpg'
 import img_wiel_before from './assets/beforeNafter/wiel_before/wiel_before.jpg'
 import img_wiel_after from './assets/beforeNafter/wiel_after/wiel_after.jpg'
 import InstagramEmbed from './components/InstagramEmbed';
+import Carousel from './components/Carousel';
+import Carousel_3piece from './components/Carousel_3piece';
 
+// Load images
+const images = import.meta.glob('/src/assets/slideshow/*.{jpg,jpeg,png,gif}', { eager: true });
+const imageUrls = Object.values(images).map((mod) => mod.default);
 
 const PageDiv = styled.div`
   display: flex;
@@ -60,7 +65,7 @@ const PageContentDiv = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  h2{
+  h1{
     margin: 1.2rem 0 0.75rem 0
   }
 
@@ -154,6 +159,7 @@ const BeforeNAfterDiv = styled(BrowserView)`
   justify-content: center;
   flex-direction: row;
   gap: 2em;
+  margin-top: 0.50em;
 `;
 
 const BeforeNAfterDivMobile = styled(MobileView)`
@@ -171,9 +177,14 @@ const BeforeAfterSliderDiv = styled.div`
   width:100%;
 
   p{
-    margin: 0.2rem;
+    margin: 0.5rem;
     text-align: center;
   }
+`;
+
+const ShowcaseSection = styled(Section)`
+  color: var(--c-black);
+  padding: 2rem 0 0 0;
 `;
 
 const InstaSection = styled(Section)`
@@ -238,7 +249,7 @@ function App() {
           </TopVidsDiv>
 
           <IntroTextDiv>
-            <h2>Welkom bij Vanhex Car Care - Uw Specialist in Auto Detailing!</h2>
+            <h1>Welkom bij Vanhex Car Care - Uw Specialist in Auto Detailing!</h1>
             <p>
             Wij brengen uw auto weer in showroomstaat, zowel van binnen als van buiten. Onze diensten omvatten professionele dieptereiniging, krasvrije wasbeurten, polijsten, en duurzame keramische coatings voor een langdurige bescherming en glans. Of het nu gaat om het grondig reinigen van het interieur of het herstellen van de lak, we leveren vakwerk tot in de kleinste details.
             <br/><br/>
@@ -249,7 +260,7 @@ function App() {
 
       <PakketSection>
         <PageContentDiv>
-          <h2>Pakketten</h2>
+          <h1>Pakketten</h1>
           <PakketDiv>
             <PakketImg src={extImage} alt='Exterieur pakket' loading='lazy' onMouseOver={() => setExtImage(pkt_expl_ext)} onMouseOut={() => setExtImage(pkt_list_ext)}/>
             <PakketImg src={intImage} alt='Interieur pakket' loading='lazy' onMouseOver={() => setIntImage(pkt_expl_int)} onMouseOut={() => setIntImage(pkt_list_int)}/>
@@ -266,7 +277,7 @@ function App() {
       <BeforeNAfterSection>
         <PageContentDiv>
           
-            <h2>Wat u kan verwachten</h2>
+            <h1>Wat u kan verwachten</h1>
             <p>U kunt rekenen op een grondige, veilige reiniging van het interieur en exterieur, waarbij elke kras, vlek en onvolkomenheid wordt aangepakt. Onze polijst- en coatingtechnieken herstellen de lak en beschermen deze langdurig en dat allemaal op locatie. Wij zorgen ervoor dat uw auto er weer als nieuw uitziet</p>
             
             <BeforeNAfterDiv>
@@ -295,9 +306,25 @@ function App() {
         </PageContentDiv>
       </BeforeNAfterSection>
 
+
+
+      <ShowcaseSection>
+        <PageContentDiv>
+            <h1>Gegarandeerd een prachtig resultaat!</h1>
+            <p>Mocht u nog steeds niet overtuigd zijn dan hebben wij hier voor u wat fotos op een rij gezet. </p>
+            <MobileView>
+              <Carousel images={imageUrls}/>
+            </MobileView>
+            <BrowserView>
+              <Carousel_3piece images={imageUrls}/>
+            </BrowserView>
+        </PageContentDiv>
+      </ShowcaseSection>
+
       <InstaSection>
         <PageContentDiv>
-            <h2>Volg ons ook op instagram!</h2>
+            <h1>Meer zien?</h1>
+            <p>Volg ons dan ook op instagram om altijd op de hoogte te blijven van de laatste nieuwigheden.</p>
             <InstagramEmbed postUrl="https://www.instagram.com/vanhexcarcare/"/>
         </PageContentDiv>
       </InstaSection>
