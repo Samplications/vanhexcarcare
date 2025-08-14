@@ -5,12 +5,6 @@ import { BrowserView, MobileView } from 'react-device-detect';
 import Slideshow from './components/Slideshow';
 import ContactModal from './components/ContactModal';
 
-import vid_bmw_inzepen from './assets/videos/bmw_inzepen.mp4'
-import vid_bmw_foam from './assets/videos/bmw_foam.mp4'
-import vid_bmw_wassen from './assets/videos/bmw_wassen.mp4'
-import vid_bmw_afspoelen from './assets/videos/bmw_afspoelen.mp4'
-import vid_bmw_afdrogen from './assets/videos/bmw_afdrogen.mp4'
-
 import vid_bmx_x5_foamen from './assets/videos/bmx_x5_foamen.mp4'
 import vid_bmx_x5_afspuiten from './assets/videos/bmx_x5_afspuiten.mp4'
 import vid_polijsten from './assets/videos/polijsten.mp4'
@@ -20,16 +14,16 @@ import vid_matten_strepen from './assets/videos/matten_strepen.mp4'
 
 import pkt_list_ext from './assets/pakketten/ext_pkt_list.jpg'
 import pkt_list_int from './assets/pakketten/int_pkt_list.jpg'
-import pkt_list_pol from './assets/pakketten/polijst_pkt_list.jpg'
-import pkt_list_keram from './assets/pakketten/keram_coat_pkt_list.jpg'
-import pkt_list_keram_plus from './assets/pakketten/keram_coat_plus_pkt_list.jpg'
+import pkt_list_pol_licht from './assets/pakketten/polijst_pkt_licht.jpg'
+import pkt_list_pol_medium from './assets/pakketten/polijst_pkt_medium.jpg'
+import pkt_list_pol_premium from './assets/pakketten/polijst_pkt_premium.jpg'
+import pkt_list_keram_ext from './assets/pakketten/keram_coat_ext.jpg'
+
+import pkt_list_keram_int from './assets/pakketten/keram_coat_int.jpg'
 
 import pkt_expl_ext from './assets/pakketten/ext_pkt_expl.jpg'
 import pkt_expl_int from './assets/pakketten/int_pkt_expl.jpg'
 import pkt_expl_pol from './assets/pakketten/polijst_pkt_expl.jpg'
-import pkt_expl_keram from './assets/pakketten/keram_coat_pkt_expl.jpg'
-import pkt_expl_keram_plus from './assets/pakketten/keram_coat_plus_pkt_list.jpg' 
-// TODO Get keram coat plust needs expl part
 
 import img_flank_before from './assets/beforeNafter/flank_before/flank_before.jpg'
 import img_flank_after from './assets/beforeNafter/flank_after/flank_after.jpg'
@@ -42,6 +36,7 @@ import img_wiel_after from './assets/beforeNafter/wiel_after/wiel_after.jpg'
 import InstagramEmbed from './components/InstagramEmbed';
 import Carousel from './components/Carousel';
 import Carousel_3piece from './components/Carousel_3piece';
+import ChatbotWithToggle from './components/ChatbotWithToggle';
 
 // Load images
 const images = import.meta.glob('/src/assets/slideshow/*.{jpg,jpeg,png,gif}', { eager: true });
@@ -216,9 +211,10 @@ function App() {
 
   const [extImage, setExtImage] = useState(pkt_list_ext);
   const [intImage, setIntImage] = useState(pkt_list_int);
-  const [polijstImage, setPolijstImage] = useState(pkt_list_pol);
-  const [keramImage, setKeramImage] = useState(pkt_list_keram);
-  const [keramPlusImage, setKeramPlusImage] = useState(pkt_list_keram_plus);
+  const [polijsLichttImage, setPolijsLichtImage] = useState(pkt_list_pol_licht);
+  const [polijsMediumtImage, setPolijsMediumImage] = useState(pkt_list_pol_medium);
+  const [polijsPremiumtImage, setPolijsPremiumImage] = useState(pkt_list_pol_premium);
+  const [keramExtImage, setKeramExtImage] = useState(pkt_list_keram_ext);
 
   const beforenafterpics = [
     img_flank_before,
@@ -229,7 +225,7 @@ function App() {
     img_wiel_after
   ];
 
-  preloadImages([pkt_expl_ext, pkt_expl_int, pkt_expl_pol, pkt_expl_keram]);
+  preloadImages([pkt_expl_ext, pkt_expl_int, pkt_list_pol_licht, pkt_list_pol_medium, pkt_list_pol_premium, pkt_list_keram_ext]);
 
   return (
     <PageDiv>
@@ -264,9 +260,11 @@ function App() {
           <PakketDiv>
             <PakketImg src={extImage} alt='Exterieur pakket' loading='lazy' onMouseOver={() => setExtImage(pkt_expl_ext)} onMouseOut={() => setExtImage(pkt_list_ext)}/>
             <PakketImg src={intImage} alt='Interieur pakket' loading='lazy' onMouseOver={() => setIntImage(pkt_expl_int)} onMouseOut={() => setIntImage(pkt_list_int)}/>
-            <PakketImg src={polijstImage} alt='Polijst pakket' loading='lazy' onMouseOver={() => setPolijstImage(pkt_expl_pol)} onMouseOut={() => setPolijstImage(pkt_list_pol)}/>
-            <PakketImg src={keramImage} alt='Keramiek pakket' loading='lazy' onMouseOver={() => setKeramImage(pkt_expl_keram)} onMouseOut={() => setKeramImage(pkt_list_keram)}/>
-            <PakketImg src={keramPlusImage} alt='Keramiek+ pakket' loading='lazy' onMouseOver={() => setKeramPlusImage(pkt_expl_keram)} onMouseOut={() => setKeramPlusImage(pkt_list_keram_plus)}/>
+            <PakketImg src={keramExtImage} alt='Keramiek pakket' loading='lazy' onMouseOver={() => setKeramExtImage(pkt_list_keram_int)} onMouseOut={() => setKeramExtImage(pkt_list_keram_ext)}/>
+            <PakketImg src={polijsLichttImage} alt='Polijst pakket licht' loading='lazy' onMouseOver={() => setPolijsLichtImage(pkt_expl_pol)} onMouseOut={() => setPolijsLichtImage(pkt_list_pol_licht)}/>
+            <PakketImg src={polijsMediumtImage} alt='Keramiek pakket Medium' loading='lazy' onMouseOver={() => setPolijsMediumImage(pkt_expl_pol)} onMouseOut={() => setPolijsMediumImage(pkt_list_pol_medium)}/>
+            <PakketImg src={polijsPremiumtImage} alt='Keramiek pakket Premium' loading='lazy' onMouseOver={() => setPolijsPremiumImage(pkt_expl_pol)} onMouseOut={() => setPolijsPremiumImage(pkt_list_pol_premium)}/>
+            
           </PakketDiv>
           
           <BookBtn onClick={handleOpenModal}>Boek nu!</BookBtn>
@@ -328,6 +326,8 @@ function App() {
             <InstagramEmbed postUrl="https://www.instagram.com/vanhexcarcare/"/>
         </PageContentDiv>
       </InstaSection>
+
+      <ChatbotWithToggle/>
     </PageDiv>
   )
 }
