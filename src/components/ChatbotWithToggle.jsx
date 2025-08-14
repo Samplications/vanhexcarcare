@@ -214,7 +214,7 @@ Pakketten:\
         {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+            'Authorization': 'Bearer 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',
           },
         }
       );
