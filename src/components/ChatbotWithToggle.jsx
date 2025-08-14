@@ -194,7 +194,7 @@ const ChatbotWithToggle = () => {
 
     try {
       const response = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
+        'https://openai-backend-6999.onrender.com/api/chat',
         {
           model: "gpt-4o-mini",
           messages: [
@@ -210,12 +210,6 @@ Pakketten:\
             ...messages.map(msg => ({ role: msg.sender === 'user' ? 'user' : 'assistant', content: msg.text })),
             { role: "user", content: inputValue }
           ],
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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',
-          },
         }
       );
 
