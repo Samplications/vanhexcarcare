@@ -32,6 +32,17 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://vanhexcarcare.be/" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./src/main.jsx" as="script">
+
+    <!-- Preconnect to external domains (e.g., Google Fonts, CDNs) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
   </head>
   <body>
     <div id="root"></div>
