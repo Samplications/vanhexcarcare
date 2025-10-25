@@ -111,6 +111,10 @@ const TopVids = styled.video`
 const PakketSection = styled(Section)`
   color: var(--c-black);
   padding: 0 0 3em 0;
+
+  @media (max-width: 767px) {
+    padding: 0 0 2em 0;
+  };
 `;
 
 const PakketDiv = styled.div`
@@ -145,8 +149,12 @@ const IntroTextDiv = styled.div`
 
 const BeforeNAfterSection = styled(Section)`
   background-color: var(--c-primary);
-  padding: 4em 0 7em 0;
+  padding: 4em 0 5em 0;
   color: var(--c-white);
+
+  @media (max-width: 767px) {
+     padding: 2rem 0 2.5rem 0;
+  }
 `;
 
 const BeforeNAfterDiv = styled(BrowserView)`
@@ -180,6 +188,10 @@ const BeforeAfterSliderDiv = styled.div`
 const ShowcaseSection = styled(Section)`
   color: var(--c-black);
   padding: 4em 0 0 0;
+
+  @media (max-width: 767px) {
+     padding: 2rem 0 0 0;
+  }
 `;
 
 const InstaSection = styled(Section)`
