@@ -110,7 +110,7 @@ const TopVids = styled.video`
 
 const PakketSection = styled(Section)`
   color: var(--c-black);
-  padding: 0 0 2rem 0;
+  padding: 0 0 3em 0;
 `;
 
 const PakketDiv = styled.div`
@@ -145,7 +145,7 @@ const IntroTextDiv = styled.div`
 
 const BeforeNAfterSection = styled(Section)`
   background-color: var(--c-primary);
-  padding: 2rem 0 2.5rem 0;
+  padding: 4em 0 7em 0;
   color: var(--c-white);
 `;
 
@@ -179,13 +179,13 @@ const BeforeAfterSliderDiv = styled.div`
 
 const ShowcaseSection = styled(Section)`
   color: var(--c-black);
-  padding: 2rem 0 0 0;
+  padding: 4em 0 0 0;
 `;
 
 const InstaSection = styled(Section)`
   background-color: var(--c-white);
 
-  padding: 2rem 0 0.5rem 0;
+  padding: 3em 0 0.5em 0;
 
   color: var(--c-black);
 `;
