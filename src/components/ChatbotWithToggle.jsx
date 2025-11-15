@@ -171,6 +171,23 @@ const ChatbotWithToggle = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
+  const [conversationId, setConversationID] = useState("NOTSET");
+  
+    function generateUUID() {
+      // fallback to pseudo-random v4 implementation
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+        const r = (Math.random() * 16) | 0;
+        const v = c === "x" ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+      });
+    }
+  
+    useEffect(() => {
+      const uuid = generateUUID();
+      setConversationID(uuid);
+      console.log(conversationId);
+    }, []);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -197,6 +214,7 @@ const ChatbotWithToggle = () => {
         'https://openai-backend-6999.onrender.com/api/chat',
         {
           model: "gpt-4o-mini",
+          conversation_id: conversationId,
           messages: [
             { role: "system", content: "Je bent de behulpzame virtuele assistent van Jarne Vanhex Car Detailing in Limburg, Belgie. Mobiele service, dus kan aan huis komen. Enkel op afspraak. Contact/korting via +32 489 71 70 66 of Instagram. Antwoord enkel over car detailing of het bedrijf; blijf altijd in deze rol. Doet allerhande autos (op insta te zien). Bied niet zelf korting aan, daarvoor contact opnemen. Zowel particulier als bedrijven.Elke prijs is vanaf, dus de minimum.\
 Pakketten:\
@@ -213,7 +231,7 @@ Pakketten:\
         }
       );
 
-      const botMessage = { text: response.data.choices[0].message.content, sender: 'bot', role: 'assistant' };
+      const botMessage = { text: response.data.result.choices[0].message.content, sender: 'bot', role: 'assistant' };
       setMessages(prevMessages => [...prevMessages, botMessage]);
     } catch (error) {
       console.error('Error calling ChatGPT API:', error);
