@@ -211,7 +211,7 @@ const ChatbotWithToggle = () => {
 
     try {
       const response = await axios.post(
-        'https://openai-backend-6999.onrender.com/api/chat',
+        'https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/chat',
         {
           model: "gpt-4o-mini",
           conversation_id: conversationId,
