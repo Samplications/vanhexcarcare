@@ -14,9 +14,11 @@ const FooterDiv = styled.div`
 `;
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <FooterDiv>
-      <p>Vanhex Carcare © 2025</p>
+      <p>Vanhex Carcare © {currentYear}</p>
     </FooterDiv>
   )
 }
