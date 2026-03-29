@@ -220,9 +220,9 @@ const ChatbotWithToggle = () => {
 Pakketten:\
 1. Exterieur – Velgen, wielkasten, lak (pH-neutrale shampoo), hydrofobe beschermlaag, ramen, voedende tyredressing. €65+.\
 2. Interieur – Dieptereiniging, vlekverwijdering, bekleding, optie zetelreiniging. €145+.\
-3.1 Keramische coating exterieur – Exterieur dieptereiniging, kleien, polijsten, keramische coating van 1,2, of 4 jaar. prijs op maat.\
-3.2 Keramische coating interieur – Dieptereiniging en ontvetten interieur/leder, keramische coating van 1 of 2 jaar. prijs op maat.\
-4. Licht Polijst – Exterieur dieptereiniging, kleien, polijsten. €295+.\
+3.1 Keramische coating exterieur – Exterieur dieptereiniging, kleien, polijsten, keramische coating van meedere jaren. prijs op maat.\
+3.2 Keramische coating interieur – Dieptereiniging en ontvetten interieur/leder, keramische coating van meedere jaren. prijs op maat.\
+4. Licht Polijst – Exterieur dieptereiniging, kleien, polijsten. €345+.\
 5. Medium Polijst – Exterieur dieptereiniging, kleien, 2-staps polijsten. €495+.\
 6. Premium Polijst – Exterieur dieptereiniging, kleien, meerstaps polijsten. €795+." },
             ...messages.map(msg => ({ role: msg.sender === 'user' ? 'user' : 'assistant', content: msg.text })),
