@@ -92,6 +92,7 @@ const TopSection = styled(Section)`
 `;
 
 const BookBtn = styled.button`
+margin-top: 2rem;
   font-size: 1.4rem;
 `;
 
@@ -118,25 +119,21 @@ const PakketSection = styled(Section)`
 `;
 
 const PakketDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; // Use a fixed gap (e.g., 1rem) instead of percentage
+  width: 100%; // Ensure it takes full width of its parent
 
   @media (max-width: 767px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   };
 `;
 
 const PakketImg = styled.img`
-  width: 30%;
+  width: 100%;
   height: auto;
-  margin-bottom: 3.33%;
-
-   @media (max-width: 767px) {
-    width: 100%;
-  };
+  object-fit: cover; // Ensures images cover the grid cell without distortion
+  margin-bottom: 0; // Remove margin to avoid extra spacing
 `;
 
 const IntroTextDiv = styled.div`
