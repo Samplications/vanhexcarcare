@@ -33,24 +33,42 @@ const SlideImage = styled.img`
 const DotsContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+  margin-top: 0.7rem;
+  max-width: 500px;
+  overflow: hidden;
+  padding: 0 8px;
 `;
 
 const Dot = styled.div`
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
+  height: ${({ size }) => size}px;
+  width: ${({ size }) => size}px;
+  min-width: unset;
+  min-height: unset;
+  flex-shrink: 0;
+  box-sizing: content-box;
+  margin: 0 3px;
   background-color: ${({ active }) => (active ? "#ffa029" : "#ccc")};
   border-radius: 50%;
+  display: block;
+  transition: background-color 0.3s ease;
   cursor: pointer;
 `;
 
 export default function ImageCarousel({ images, interval_conf = 5000 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [startX, setStartX] = useState(null);
-  
+
   // Ref to store the interval ID
   const intervalRef = useRef(null);
+
+  // Compute dot size so all dots fit within the 500px container.
+  // Each dot occupies (size + 2 * 5px margin) horizontal space. -> 10 + 2 * (margin i.e.) 3 = 12
+  // We cap at 10px (the original size) and floor at 4px to stay visible.
+  const dotSize = Math.min(
+    20,
+    Math.max(4, Math.floor(480 / (images.length * 16)))
+  );
 
   // Function to move to the next slide
   const nextSlide = () => {
@@ -85,14 +103,14 @@ export default function ImageCarousel({ images, interval_conf = 5000 }) {
   // Function to reset the auto-scroll timer
   const resetAutoScroll = () => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Clear the existing interval
+      clearInterval(intervalRef.current);
     }
-    intervalRef.current = setInterval(nextSlide, interval_conf); // Start a new interval
+    intervalRef.current = setInterval(nextSlide, interval_conf);
   };
 
   useEffect(() => {
-    intervalRef.current = setInterval(nextSlide, interval_conf); // Start the initial interval
-    return () => clearInterval(intervalRef.current); // Clear the interval on unmount
+    intervalRef.current = setInterval(nextSlide, interval_conf);
+    return () => clearInterval(intervalRef.current);
   }, [interval_conf]);
 
   return (
@@ -114,6 +132,7 @@ export default function ImageCarousel({ images, interval_conf = 5000 }) {
         {images.map((_, index) => (
           <Dot
             key={index}
+            size={dotSize}
             active={index === currentSlide}
             onClick={() => setCurrentSlide(index)}
           />

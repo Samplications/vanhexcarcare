@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from 'styled-components';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const CarouselContainer = styled.div`
   width: 100%;
@@ -13,14 +14,13 @@ const SlidesWrapper = styled.div`
   display: flex;
   transition: transform 0.5s ease-in-out;
   transform: ${({ currentSlide, totalSlides }) => {
-    const offset = 100 / 3; // Each slide is 33.333%
+    const offset = 100 / 3;
     const base = (currentSlide - 2) * offset;
     const maxOffset = (totalSlides - 3) * offset;
-    const clampedBase = Math.max(Math.min(base, maxOffset), 0); // Don't allow over-scroll
+    const clampedBase = Math.max(Math.min(base, maxOffset), 0);
     return `translateX(-${clampedBase}%)`;
   }};
 `;
-
 
 const Slide = styled.div`
   flex: 0 0 33.333%;
@@ -36,7 +36,7 @@ const SlideImage = styled.img`
   object-fit: contain;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  
+
   ${({ isCurrent }) => isCurrent && `
     transform: scale(1.1);
     opacity: 1;
@@ -61,10 +61,12 @@ const Button = styled.button`
   background-color: var(--c-secondary);
   border: none;
   color: white;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   cursor: pointer;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.3s;
 
   &:hover {
@@ -76,23 +78,28 @@ const Button = styled.button`
 const DotsContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 1rem;
 `;
 
 const Dot = styled.div`
   height: 10px;
   width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  flex-shrink: 0;
+  box-sizing: content-box;
   margin: 0 5px;
-   background-color: ${({ active }) => (active ? "#ffa029" : "#ccc")};
+  background-color: ${({ active }) => (active ? "#ffa029" : "#ccc")};
   border-radius: 50%;
-  display: inline-block;
+  display: block;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 `;
 
 const Carousel_3piece = ({ images, interval_conf = 5000 }) => {
   const [currentSlide, setCurrentSlide] = useState(2);
-  // Ref to store the interval ID
-const intervalRef = useRef(null);
+  const intervalRef = useRef(null);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1 > images.length ? 1 : prev + 1));
@@ -104,18 +111,17 @@ const intervalRef = useRef(null);
     resetAutoScroll();
   };
 
-  // Function to reset the auto-scroll timer
   const resetAutoScroll = () => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Clear the existing interval
+      clearInterval(intervalRef.current);
     }
-    intervalRef.current = setInterval(nextSlide, interval_conf); // Start a new interval
+    intervalRef.current = setInterval(nextSlide, interval_conf);
   };
 
   useEffect(() => {
-      intervalRef.current = setInterval(nextSlide, interval_conf); // Start the initial interval
-      return () => clearInterval(intervalRef.current); // Clear the interval on unmount
-    }, [interval_conf]);
+    intervalRef.current = setInterval(nextSlide, interval_conf);
+    return () => clearInterval(intervalRef.current);
+  }, [interval_conf]);
 
   return (
     <>
@@ -125,9 +131,9 @@ const intervalRef = useRef(null);
             const slideIndex = index + 1;
             return (
               <Slide key={index}>
-                <SlideImage 
-                  src={img} 
-                  alt={`Slide ${index}`} 
+                <SlideImage
+                  src={img}
+                  alt={`Slide ${index}`}
                   isCurrent={slideIndex === currentSlide}
                   isSide={slideIndex !== currentSlide}
                 />
@@ -137,14 +143,22 @@ const intervalRef = useRef(null);
         </SlidesWrapper>
 
         <Controls>
-          <Button onClick={prevSlide}>‹</Button>
-          <Button onClick={nextSlide}>›</Button>
+          <Button onClick={prevSlide}>
+            <ChevronLeft size={32} />
+          </Button>
+          <Button onClick={nextSlide}>
+            <ChevronRight size={32} />
+          </Button>
         </Controls>
       </CarouselContainer>
 
       <DotsContainer>
         {images.map((_, index) => (
-          <Dot key={index} active={currentSlide === index + 1} onClick={() => setCurrentSlide(index + 1)}/>
+          <Dot
+            key={index}
+            active={currentSlide === index + 1}
+            onClick={() => setCurrentSlide(index + 1)}
+          />
         ))}
       </DotsContainer>
     </>
