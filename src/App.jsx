@@ -39,7 +39,7 @@ import Carousel_3piece from './components/Carousel_3piece';
 import ChatbotWithToggle from './components/ChatbotWithToggle';
 
 // Load images
-const images = import.meta.glob('/src/assets/slideshow/*.{jpg,jpeg,png,gif}', { eager: true });
+const images = import.meta.glob('/src/assets/slideshow/*.{jpg,jpeg,png,gif,webp}', { eager: true });
 const imageUrls = Object.values(images).map((mod) => mod.default);
 
 const PageDiv = styled.div`
