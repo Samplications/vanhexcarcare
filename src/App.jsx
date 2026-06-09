@@ -12,27 +12,27 @@ import vid_koffer_stofzuigen from './assets/videos/koffer_stofzuigen.mp4'
 import vid_koffer_borstelen from './assets/videos/koffer_borstelen_e.mp4'
 import vid_matten_strepen from './assets/videos/matten_strepen.mp4'
 
-import pkt_list_ext from './assets/pakketten/ext_pkt_list.jpg'
-import pkt_list_int from './assets/pakketten/int_pkt_list.jpg'
-import pkt_list_pol_licht from './assets/pakketten/polijst_pkt_licht.jpg'
-import pkt_list_pol_medium from './assets/pakketten/polijst_pkt_medium.jpg'
-import pkt_list_pol_premium from './assets/pakketten/polijst_pkt_premium.jpg'
-import pkt_list_keram_ext from './assets/pakketten/keram_coat_ext.jpg'
+import pkt_list_ext from './assets/pakketten/ext_pkt_list.webp'
+import pkt_list_int from './assets/pakketten/int_pkt_list.webp'
+import pkt_list_pol_licht from './assets/pakketten/polijst_pkt_licht.webp'
+import pkt_list_pol_medium from './assets/pakketten/polijst_pkt_medium.webp'
+import pkt_list_pol_premium from './assets/pakketten/polijst_pkt_premium.webp'
+import pkt_list_keram_ext from './assets/pakketten/keram_coat_ext.webp'
 
-import pkt_list_keram_int from './assets/pakketten/keram_coat_int.jpg'
+import pkt_list_keram_int from './assets/pakketten/keram_coat_int.webp'
 
-import pkt_expl_ext from './assets/pakketten/ext_pkt_expl.jpg'
-import pkt_expl_int from './assets/pakketten/int_pkt_expl.jpg'
-import pkt_expl_pol from './assets/pakketten/polijst_pkt_expl.jpg'
+import pkt_expl_ext from './assets/pakketten/ext_pkt_expl.webp'
+import pkt_expl_int from './assets/pakketten/int_pkt_expl.webp'
+import pkt_expl_pol from './assets/pakketten/polijst_pkt_expl.webp'
 
-import img_flank_before from './assets/beforeNafter/flank_before/flank_before.jpg'
-import img_flank_after from './assets/beforeNafter/flank_after/flank_after.jpg'
+import img_flank_before from './assets/beforeNafter/flank_before/flank_before.webp'
+import img_flank_after from './assets/beforeNafter/flank_after/flank_after.webp'
 
-import img_mat_before from './assets/beforeNafter/mat_before/mat_before.jpg'
-import img_mat_after from './assets/beforeNafter/mat_after/mat_after.jpg'
+import img_mat_before from './assets/beforeNafter/mat_before/mat_before.webp'
+import img_mat_after from './assets/beforeNafter/mat_after/mat_after.webp'
 
-import img_wiel_before from './assets/beforeNafter/wiel_before/wiel_before.jpg'
-import img_wiel_after from './assets/beforeNafter/wiel_after/wiel_after.jpg'
+import img_wiel_before from './assets/beforeNafter/wiel_before/wiel_before.webp'
+import img_wiel_after from './assets/beforeNafter/wiel_after/wiel_after.webp'
 import InstagramEmbed from './components/InstagramEmbed';
 import Carousel from './components/Carousel';
 import Carousel_3piece from './components/Carousel_3piece';
