@@ -5,12 +5,12 @@ import { BrowserView, MobileView } from 'react-device-detect';
 import Slideshow from './components/Slideshow';
 import ContactModal from './components/ContactModal';
 
-import vid_bmx_x5_foamen from './assets/videos/bmx_x5_foamen.mp4'
-import vid_bmx_x5_afspuiten from './assets/videos/bmx_x5_afspuiten.mp4'
-import vid_polijsten from './assets/videos/polijsten.mp4'
-import vid_koffer_stofzuigen from './assets/videos/koffer_stofzuigen.mp4'
-import vid_koffer_borstelen from './assets/videos/koffer_borstelen_e.mp4'
-import vid_matten_strepen from './assets/videos/matten_strepen.mp4'
+import vid_bmx_x5_foamen from './assets/videos/bmx_x5_foamen_v2.mp4'
+import vid_bmx_x5_afspuiten from './assets/videos/bmx_x5_afspuiten_v2.mp4'
+import vid_polijsten from './assets/videos/polijsten_v2.mp4'
+import vid_koffer_stofzuigen from './assets/videos/koffer_stofzuigen_v2.mp4'
+import vid_koffer_borstelen from './assets/videos/koffer_borstelen_e_v2.mp4'
+import vid_matten_strepen from './assets/videos/matten_strepen_v2.mp4'
 
 import pkt_list_ext from './assets/pakketten/ext_pkt_list.webp'
 import pkt_list_int from './assets/pakketten/int_pkt_list.webp'
